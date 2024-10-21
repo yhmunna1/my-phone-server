@@ -1,0 +1,18 @@
+1) Visit: https://expressjs.com/ => Installation
+2) Open folder and cmd
+3) mkdir myapp
+4) cd myapp
+5) npm init -y
+6) npm install express
+
+7) npm install -g nodemon (We are using nodemon because of auto load, install it globally)
+8) https://expressjs.com/en/starter/hello-world.html
+9) copy the code
+10) Run Server => nodemon index.js
+
+11) Give access for load the data to the client
+12) https://expressjs.com/en/resources/middleware/cors.html
+13) npm install cors
+14) index.js
+    var cors = require('cors')
+    app.use(cors())
