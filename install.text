@@ -16,3 +16,24 @@
 14) index.js
     var cors = require('cors')
     app.use(cors())
+
+15) Load data from the client side: main.jsx
+    {
+        path: "/phones",
+        element: <Phones />,
+        loader: () => fetch("http://localhost:3000/phones"),
+      },
+      {
+        path: "/phone/:id",
+        element: <Phone></Phone>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/phone/${params.id}`),
+      },
+
+    Phones.jsx:
+    const phones = useLoaderData();
+    console.log(phones);
+
+    Phone.jsx:
+    const phone = useLoaderData();
+    console.log(phone);
